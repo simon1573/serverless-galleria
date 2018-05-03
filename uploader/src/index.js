@@ -35,9 +35,8 @@ function fileRoute(event, context, lambdaCallback) {
 
     put(destBucket, key, body)
       .then(() => {
-        message = 'Saved ' + destBucket + ':' + key;
         console.log(message);
-        done(200, JSON.stringify({message:message}), 'application/json', lambdaCallback);
+        done(200, JSON.stringify({message:key}), 'application/json', lambdaCallback);
       })
       .catch((error) => {
         console.error(error);
