@@ -14,7 +14,7 @@ Resources:
         - S3CrudPolicy:
             BucketName:
               Ref: destBucket
-      Timeout: 60
+      Timeout: 30
       Events:
         root:
           Type: Api
